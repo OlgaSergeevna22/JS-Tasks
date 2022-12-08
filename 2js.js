@@ -76,9 +76,61 @@
 // alert( `number ${i}!` );
 // }
 
-let i = 0;
-while (i < 3) {
-    alert(`number ${i}!`);
-    i++;
+// let i = 0;
+// while (i < 3) {
+//     alert(`number ${i}!`);
+//     i++;
 
+// }
+
+
+// Задание 7
+// Переписать задание 4 в виде функции. Т.е. описать функцию, которая выводит квадраты чисел из заданного диапазона (диапазон будет попадать в функцию как аргументы).
+
+
+// const calcSquare = (min, max) => {
+//     for (let i = min; i < max; i++) {
+//         console.log(i ** 2);
+//     }
+// }
+// calcSquare(3, 10);
+
+
+
+// Задание 8
+// Написать функцию, котрая возвращает строку - случайный цвет в формате rgb. Это будет строка вида "rgb(10,55,250)"
+
+// Здесь у вас будет две функции: одна ваша - getRandomRGB, а вторая - функция получения случайного числа в диапазоне min - max. Вот эта функция (просто скопируйте, она уже готова):
+// function getRandomInteger(min, max) {
+// return Math.floor(Math.random() * (max - min)) + min;
+// }
+// Подсказка: 
+
+// Каждый цвет - 3 числа, каждое число лежит в диапазоне от 0 до 255. 
+
+// Одна функция может вызывать другую функцию
+
+
+const getRandomRGB = (colorNumber1, colorNumber2, colorNumber3) => {
+
+    colorNumber1 = getRandomInteger(0, 255);
+    colorNumber2 = getRandomInteger(0, 255);
+    colorNumber3 = getRandomInteger(0, 255);
+
+    return `rgb(${colorNumber1},${colorNumber2},${colorNumber3})`;
 }
+
+// Сократила
+
+
+// const getRandomRGB = () => {
+
+//     return `rgb(${getRandomInteger(0,255)},${getRandomInteger(0,255)},${getRandomInteger(0,255)})`;
+// }
+
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(getRandomRGB());
