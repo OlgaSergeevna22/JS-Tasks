@@ -119,10 +119,10 @@ const getRandomRGB = (colorNumber1, colorNumber2, colorNumber3) => {
 // Сократила
 
 
-// const getRandomRGB = () => {
+const getRandomRGB1 = () => {
 
-//     return `rgb(${getRandomInteger(0,255)},${getRandomInteger(0,255)},${getRandomInteger(0,255)})`;
-// }
+    return `rgb(${getRandomInteger(0,255)},${getRandomInteger(0,255)},${getRandomInteger(0,255)})`;
+}
 
 
 function getRandomInteger(min, max) {
