@@ -130,6 +130,8 @@ function getRandomInteger(min, max) {
 }
 
 console.log(getRandomRGB());
+console.log(getRandomRGB1());
+
 
 
 // Задание 9
