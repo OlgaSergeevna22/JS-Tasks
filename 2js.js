@@ -107,30 +107,30 @@
 // // Одна функция может вызывать другую функцию
 
 
-const getRandomRGB = () => {
+// const getRandomRGB = () => {
 
-    let colorNumber1 = getRandomInteger(0, 255);
-    let colorNumber2 = getRandomInteger(0, 255);
-    let colorNumber3 = getRandomInteger(0, 255);
+//     let colorNumber1 = getRandomInteger(0, 255);
+//     let colorNumber2 = getRandomInteger(0, 255);
+//     let colorNumber3 = getRandomInteger(0, 255);
 
-    return `rgb(${colorNumber1},${colorNumber2},${colorNumber3})`;
-}
+//     return `rgb(${colorNumber1},${colorNumber2},${colorNumber3})`;
+// }
 
-// Сократила
-
-
-const getRandomRGB1 = () => {
-
-    return `rgb(${getRandomInteger(0,255)},${getRandomInteger(0,255)},${getRandomInteger(0,255)})`;
-}
+// // Сократила
 
 
-function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+// const getRandomRGB1 = () => {
 
-console.log(getRandomRGB());
-console.log(getRandomRGB1());
+//     return `rgb(${getRandomInteger(0,255)},${getRandomInteger(0,255)},${getRandomInteger(0,255)})`;
+// }
+
+
+// function getRandomInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min)) + min;
+// }
+
+// console.log(getRandomRGB());
+// console.log(getRandomRGB1());
 
 
 // // Задание 9
