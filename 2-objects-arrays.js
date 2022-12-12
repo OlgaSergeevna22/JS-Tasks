@@ -187,3 +187,23 @@ for (let item of arr) {
     }
 }
 console.log(newArr);
+
+// Задание 8
+// Написать функцию, которая принимает массив (array) и число (num).
+// Функция должна создать новый массив из элементов массива array, и в этом новом массиве должны содержаться только элементы, больше и равные (>=) значению num.
+
+const createNewArray = (array, num) => {
+
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] >= num) {
+
+            newArray.push(array[i]);
+        }
+    }
+    console.log(newArray);;
+}
+
+
+createNewArray([3, 7, -9, 78, -43], 0);
