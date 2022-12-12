@@ -4,28 +4,52 @@
 // 1 вариант решения: с помощью логического И в условии.
 // *2 вариант решения: с помощью логического ИЛИ в условии.
 
-const checkNumber = (number, min, max) => {
+// const checkNumber = (number, min, max) => {
 
-    // 1 вариант
+//     // 1 вариант
 
-    if (number > min && number < max) {
+//     if (number > min && number < max) {
 
-        console.log(true);
-    } else {
+//         console.log(true);
+//     } else {
 
-        console.log(false);
-    }
+//         console.log(false);
+//     }
 
-    // *2 вариант
+//     // *2 вариант
 
-    if (!(number < min || number > max)) {
+//     if (!(number < min || number > max)) {
 
-        console.log(true);
-    } else {
+//         console.log(true);
+//     } else {
 
-        console.log(false);
-    }
+//         console.log(false);
+//     }
 
+// }
+
+// checkNumber(-9, 16, 100);
+
+
+
+// Задание 2
+
+// Есть объект с именами и заработными платами инженеров:
+// const engineers = {
+// Den: 1000,
+// Matt: 5000,
+// Steve: 2000
+// }
+// Вывести в консоль через шаблонные строки заработную плату всех работников в таком формате:
+// Заработная плата ххх составляет ххх рублей.
+// Ваше решение должно работать для любого количества ключей в объекте!
+
+const engineers = {
+    Den: 1000,
+    Matt: 5000,
+    Steve: 2000
 }
 
-checkNumber(-9, 16, 100);
+for (let key in engineers) {
+    console.log(`Заработная плата ${key} составляет ${engineers[key]} рублей`);
+}
