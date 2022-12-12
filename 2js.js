@@ -109,9 +109,9 @@
 
 const getRandomRGB = () => {
 
-    colorNumber1 = getRandomInteger(0, 255);
-    colorNumber2 = getRandomInteger(0, 255);
-    colorNumber3 = getRandomInteger(0, 255);
+    let colorNumber1 = getRandomInteger(0, 255);
+    let colorNumber2 = getRandomInteger(0, 255);
+    let colorNumber3 = getRandomInteger(0, 255);
 
     return `rgb(${colorNumber1},${colorNumber2},${colorNumber3})`;
 }
