@@ -205,5 +205,22 @@ const createNewArray = (array, num) => {
     console.log(newArray);;
 }
 
-
 createNewArray([3, 7, -9, 78, -43], 0);
+
+
+// Задание 9
+// Существует массив пользователей, например:
+// const users = [{name: 'Vasya', age: 23}, {name: 'Olya', age: 12}, {name: 'Anna', age: 22}, {name: 'Alex', age: 18}, {name: 'Valery', age: 8}]
+// Пройти в цикле по массиву и вывести имена всех пользователей, возраст которых больше 15.
+
+
+const users = [{ name: 'Vasya', age: 23 }, { name: 'Olya', age: 12 }, { name: 'Anna', age: 22 }, { name: 'Alex', age: 18 }, { name: 'Valery', age: 8 }];
+
+
+for (let item of users) {
+
+    if (item['age'] > 15) {
+
+        console.log(item.name);
+    }
+}
