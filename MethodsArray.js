@@ -111,7 +111,18 @@ const filterFor = (arr, a) => {
 }
 
 
+// filterFor(arr, 5) //[5,8]
+//     // filterFor(arr, 10) //[]
+//     // filterFor(arr, 3.11) //[4,5,8]
 
-filterFor(arr, 5) //[5,8]
-    // filterFor(arr, 10) //[]
-    // filterFor(arr, 3.11) //[4,5,8]
+
+// Задание 5
+// Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
+
+const copyArr = (arr) => {
+
+    const newArr = arr.map(item => item);
+    console.log(newArr);
+}
+
+copyArr([2, 5, 8, 'dd', 'asd', [3, 7]]);
