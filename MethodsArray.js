@@ -85,3 +85,33 @@ const guesTheNumber = (number) => {
 guesTheNumber(11);
 guesTheNumber(3);
 guesTheNumber(-10);
+
+
+// Задание 4
+// Определить массив, например let arr = [5, 4, 3, 8, 0];
+// Создать функцию filterFor(arr, a). Функция должна вернуть новый массив из элементов arr, но в нем должны содержаться элементы, которые больше или равны (>=) значения переменной a.
+// Например, запуск функции filterFor(arr, 5) дает результат [5,8]
+// запуск функции filterFor(arr, 10) дает результат []
+// запуск функции filterFor(arr, 3.11) дает результат [4,5,8]
+
+
+let arr = [5, 4, 3, 8, 0];
+let newArr = [];
+
+const filterFor = (arr, a) => {
+
+    for (let item of arr) {
+
+        if (item >= a) {
+
+            newArr.push(item);
+        }
+    }
+    console.log(newArr);
+}
+
+
+
+filterFor(arr, 5) //[5,8]
+    // filterFor(arr, 10) //[]
+    // filterFor(arr, 3.11) //[4,5,8]
