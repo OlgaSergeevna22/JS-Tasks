@@ -68,7 +68,7 @@ const guesTheNumber = (number) => {
     if (number > 10 || number < 0) {
 
         console.log('Вы ввели число не от 0 до 10');
-    } else if (number >= 0 && number <= 10) {
+    } else {
 
         let computerNumber = Math.floor(Math.random() * 10);
 
@@ -110,10 +110,9 @@ const filterFor = (arr, a) => {
     console.log(newArr);
 }
 
-
-// filterFor(arr, 5) //[5,8]
-//     // filterFor(arr, 10) //[]
-//     // filterFor(arr, 3.11) //[4,5,8]
+filterFor(arr, 5) //[5,8]
+    //     // filterFor(arr, 10) //[]
+    //     // filterFor(arr, 3.11) //[4,5,8]
 
 
 // Задание 5
@@ -150,6 +149,8 @@ const sumObjectValues = (objectWithNumbers) => {
             summa += objectWithNumbers[key]
         }
     }
+
+    console.log(summa);
     return summa
 }
 
