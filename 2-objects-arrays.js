@@ -4,31 +4,31 @@
 // // 1 вариант решения: с помощью логического И в условии.
 // // *2 вариант решения: с помощью логического ИЛИ в условии.
 
-// const checkNumber = (number, min, max) => {
+const checkNumber = (number, min, max) => {
 
-//     // 1 вариант
+    // 1 вариант
 
-//     if (number > min && number < max) {
+    if (number > min && number < max) {
 
-//         console.log(true);
-//     } else {
+        console.log(true);
+    } else {
 
-//         console.log(false);
-//     }
+        console.log(false);
+    }
 
-//     // *2 вариант
+    // *2 вариант
 
-//     if (!(number < min || number > max)) {
+    if (!(number < min || number > max)) {
 
-//         console.log(true);
-//     } else {
+        console.log(true);
+    } else {
 
-//         console.log(false);
-//     }
+        console.log(false);
+    }
 
-// }
+}
 
-// checkNumber(-9, 16, 100);
+checkNumber(-9, 16, 100);
 
 
 
@@ -44,27 +44,27 @@
 // // Заработная плата ххх составляет ххх рублей.
 // // Ваше решение должно работать для любого количества ключей в объекте!
 
-// const engineers = {
-//     Den: 1000,
-//     Matt: 5000,
-//     Steve: 2000
-// }
+const engineers = {
+    Den: 1000,
+    Matt: 5000,
+    Steve: 2000
+}
 
-// for (let key in engineers) {
-//     console.log(`Заработная плата ${key} составляет ${engineers[key]} рублей`);
-// }
+for (let key in engineers) {
+    console.log(`Заработная плата ${key} составляет ${engineers[key]} рублей`);
+}
 
 
 // // Задание 3
 // // Создать массив из 5 элементов.
 // // Используя цикл for, вывести каждый второй элемент массива в консоль.
 
-// const elements = [2, 10, 'cat', true, [1, 2, 3]]
+const elements = [2, 10, 'cat', true, [1, 2, 3]]
 
-// for (let i = 1; i < elements.length; i += 2) {
+for (let i = 1; i < elements.length; i += 2) {
 
-//     console.log(elements[i]);
-// }
+    console.log(elements[i]);
+}
 
 
 // // Задание 4
@@ -75,12 +75,12 @@
 // // Индексу 1 соответствует число 65
 // // и т.д.
 
-// let numbersTask4 = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70];
+let numbersTask4 = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70];
 
-// for (let i = 0; i < numbersTask4.length; i++) {
+for (let i = 0; i < numbersTask4.length; i++) {
 
-//     console.log(`Индексу ${[i]} соответствует число ${numbersTask4[i]}`);
-// }
+    console.log(`Индексу ${i} соответствует число ${numbersTask4[i]}`);
+}
 
 
 // // Задание 5
@@ -97,24 +97,24 @@
 // // Добавить в каждый объект дополнительное поле usersAnswer со значением null.
 // // Решение должно работать для массива любой длины.
 
-// let questions = [{
-//     question: "What's the currency of the USA?",
-//     choices: ["US dollar", "Ruble", "Horses", "Gold"],
-//     corAnswer: 0
-// }, {
-//     question: "Where was the American Declaration of Independence signed?",
-//     choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
-//     corAnswer: 0
-// }];
+let questions = [{
+    question: "What's the currency of the USA?",
+    choices: ["US dollar", "Ruble", "Horses", "Gold"],
+    corAnswer: 0
+}, {
+    question: "Where was the American Declaration of Independence signed?",
+    choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+    corAnswer: 0
+}];
 
 
-// for (let i = 0; i < questions.length; i++) {
+for (let i = 0; i < questions.length; i++) {
 
-//     questions[i].usersAnswer = null;
+    questions[i].usersAnswer = null;
 
-// }
+}
 
-// console.log(questions);
+console.log(questions);
 
 
 // // Задание 6
@@ -128,47 +128,47 @@
 // // 4) Определить и вывести в консоль индекс максимального числа массива (или индексы, если число встречается более одного раза). Само максимальное число мы уже нашли в прошлой части задачи, повторно его искать не нужно.
 
 
-// let numbers = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70];
-// let summa = 0;
-// let summaChet = 0;
-// let max = numbers[0];
-// let maxIndex = [];
+let numbers = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70];
+let summa = 0;
+let summaChet = 0;
+let max = numbers[0];
+let maxIndex = [];
 
 
-// for (let i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
 
-//     summa = summa + numbers[i];
-// }
-// console.log(summa);
-
-
-// for (let i = 0; i < numbers.length; i++) {
-
-//     if (numbers[i] % 2 === 0) {
-
-//         summaChet = summaChet + numbers[i];
-//     }
-// }
-// console.log(summaChet);
+    summa += numbers[i];
+}
+console.log(summa);
 
 
-// for (let i = 1; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
 
-//     if (numbers[i] > max) {
+    if (numbers[i] % 2 === 0) {
 
-//         max = numbers[i];
-//         maxIndex = i;
-//     }
-// }
-// console.log(max);
+        summaChet += numbers[i];
+    }
+}
+console.log(summaChet);
 
-// for (let i = 1; i < numbers.length; i++) {
 
-//     if (max === numbers[i]) {
+for (let i = 1; i < numbers.length; i++) {
 
-//         console.log(i);
-//     }
-// }
+    if (numbers[i] > max) {
+
+        max = numbers[i];
+        maxIndex = i;
+    }
+}
+console.log(max);
+
+for (let i = 1; i < numbers.length; i++) {
+
+    if (max === numbers[i]) {
+
+        console.log(i);
+    }
+}
 
 
 // // Задание 7
@@ -177,35 +177,35 @@
 
 // // Подсказка. Изначально нужно объявить пустой массив-хранилище (например, let newArr = []). Затем пройтись в цикле по массиву arr, и в каждой итерации, если элемент положительный, добавлять его в массив newArr.
 
-// let arr = [5, 4, 3, -3, -10, -1, 8, -20, 0];
-// let newArr = [];
+let arr = [5, 4, 3, -3, -10, -1, 8, -20, 0];
+let newArr = [];
 
-// for (let item of arr) {
+for (let item of arr) {
 
-//     if (item > 0) {
-//         newArr.push(item);
-//     }
-// }
-// console.log(newArr);
+    if (item > 0) {
+        newArr.push(item);
+    }
+}
+console.log(newArr);
 
 // // Задание 8
 // // Написать функцию, которая принимает массив (array) и число (num).
 // // Функция должна создать новый массив из элементов массива array, и в этом новом массиве должны содержаться только элементы, больше и равные (>=) значению num.
 
-// const createNewArray = (array, num) => {
+const createNewArray = (array, num) => {
 
-//     const newArray = [];
-//     for (let i = 0; i < array.length; i++) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
 
-//         if (array[i] >= num) {
+        if (array[i] >= num) {
 
-//             newArray.push(array[i]);
-//         }
-//     }
-//     console.log(newArray);;
-// }
+            newArray.push(array[i]);
+        }
+    }
+    console.log(newArray);;
+}
 
-// createNewArray([3, 7, -9, 78, -43], 0);
+createNewArray([3, 7, -9, 78, -43], 0);
 
 
 // // Задание 9
@@ -214,16 +214,16 @@
 // // Пройти в цикле по массиву и вывести имена всех пользователей, возраст которых больше 15.
 
 
-// const users = [{ name: 'Vasya', age: 23 }, { name: 'Olya', age: 12 }, { name: 'Anna', age: 22 }, { name: 'Alex', age: 18 }, { name: 'Valery', age: 8 }];
+const users = [{ name: 'Vasya', age: 23 }, { name: 'Olya', age: 12 }, { name: 'Anna', age: 22 }, { name: 'Alex', age: 18 }, { name: 'Valery', age: 8 }];
 
 
-// for (let item of users) {
+for (let item of users) {
 
-//     if (item['age'] > 15) {
+    if (item['age'] > 15) {
 
-//         console.log(item.name);
-//     }
-// }
+        console.log(item.name);
+    }
+}
 
 
 // // Задание 10*
@@ -235,53 +235,17 @@
 // // Подсказка: длину строки можно определить с помощью метода .length. Например, для переменной let string = 'text' это будет string.length (результат - 4, т.к. слово text состоит из 4 символов)
 // // 2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"
 
-// let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
-// let vegetablesObjects = [];
+let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
+let vegetablesObjects = [];
 
-// for (let item of vegetables) {
+for (let item of vegetables) {
 
-//     vegetablesObjects.push({ word: item, length: item.length });
-// }
+    vegetablesObjects.push({ word: item, length: item.length });
+}
 
-// console.log(vegetablesObjects);
+console.log(vegetablesObjects);
 
-// for (let item of vegetablesObjects) {
+for (let item of vegetablesObjects) {
 
-//     console.log(`${item.word} - ${item.length}`);
-// }
-
-
-
-
-
-// Написать стрелочную функцию addTypeNames(types), которая принимает массив types и возвращает массив объектов, где ключ - это название типа, а значение - само значение из массива types. 
-// ...
-// const bigInt = 1234567890123456789012345678901234567890n;
-// const symbolValue = Symbol("symbol");
-// const types = [100, bigInt, 'Hello there!', true, null, undefined, symbolValue, { key: 'value' } ];
-
-// // На выходе массив должен выглядеть так: 
-// [
-//   { number: 100 } ,
-//   { bigInt: 1234567890123456789012345678901234567890n },
-//   { string: 'Hello there!' },
-//   { boolean: true },
-//   { null: null },
-//   { undefined: undefined },
-//   { symbol: Symbol(symbol) },
-//   { object: { key: 'value' } },
-// ]
-// Подсказка: значение null нужно проверять как  value === null, иначе будет 'object'
-
-
-const bigInt = 1234567890123456789012345678901234567890;
-const symbolValue = Symbol("symbol");
-const types = [100, bigInt, 'Hello there!', true, null, undefined, symbolValue, { key: 'value' }];
-
-
-const addKey = types.map(item => typeof item);
-const addTypeNames = types.map(item => {
-    { addKey.item + item }
-})
-
-console.log(addTypeNames);
+    console.log(`${item.word} - ${item.length}`);
+}
