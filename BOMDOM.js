@@ -19,35 +19,47 @@
 
 // window.addEventListener('click', coordinates)
 
-// 3. По аналогии со вторым заданием сделайте чтобы центр квадрата помещался в координату области
+// // 3. По аналогии со вторым заданием сделайте чтобы центр квадрата помещался в координату области
 
-let square = document.querySelector('#square');
-let field = document.querySelector('.field');
+// let square = document.querySelector('#square');
+// let field = document.querySelector('.field');
 
-field.onclick = function(event) {
+// field.onclick = function(event) {
 
-    let fieldCoords = this.getBoundingClientRect();
-    let squareCoords = {
-        top: event.clientY - fieldCoords.top - field.clientTop - square.clientHeight / 2,
-        left: event.clientX - fieldCoords.left - field.clientLeft - square.clientWidth / 2
-    };
+//     let fieldCoords = this.getBoundingClientRect();
+//     let squareCoords = {
+//         top: event.clientY - fieldCoords.top - field.clientTop - square.clientHeight / 2,
+//         left: event.clientX - fieldCoords.left - field.clientLeft - square.clientWidth / 2
+//     };
 
-    if (squareCoords.top < 0) squareCoords.top = -square.clientWidth / 2;
+//     if (squareCoords.top < 0) squareCoords.top = -square.clientWidth / 2;
 
-    if (squareCoords.left < 0) squareCoords.left = -square.clientWidth / 2;
+//     if (squareCoords.left < 0) squareCoords.left = -square.clientWidth / 2;
 
-    if (squareCoords.left + square.clientWidth > field.clientWidth) {
-        squareCoords.left = field.clientWidth - square.clientWidth / 2;
-    }
+//     if (squareCoords.left + square.clientWidth > field.clientWidth) {
+//         squareCoords.left = field.clientWidth - square.clientWidth / 2;
+//     }
 
-    if (squareCoords.top + square.clientHeight > field.clientHeight) {
-        squareCoords.top = field.clientHeight - square.clientHeight / 2;
-    }
+//     if (squareCoords.top + square.clientHeight > field.clientHeight) {
+//         squareCoords.top = field.clientHeight - square.clientHeight / 2;
+//     }
 
-    square.style.left = squareCoords.left + 'px';
-    square.style.top = squareCoords.top + 'px';
+//     square.style.left = squareCoords.left + 'px';
+//     square.style.top = squareCoords.top + 'px';
+// }
+
+// 4. Создайте инпут который будет выводить код последнего элемента введенного в инпут 
+
+let input = document.querySelector('.code');
+let result = document.querySelector('.task4')
+
+function keyCode(event) {
+    let code = event.keyCode;
+    let key = String.fromCharCode(event.keyCode);
+    result.innerHTML = 'Код: ' + code + ', клавиша: ' + key;
 }
 
+document.body.addEventListener('keypress', keyCode)
 
 
 // // 8. Создайте кнопку и элемент. При нажатии на кнопку, будет скрываться элемент
