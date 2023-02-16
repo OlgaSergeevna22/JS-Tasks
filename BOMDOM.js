@@ -76,18 +76,34 @@
 // })
 
 
-// 6. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl.
+// // 6. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl.
 
-let button = document.querySelector('.click-red');
+// let button = document.querySelector('.click-red');
 
-function getRedCtrl(event) {
+// function getRedCtrl(event) {
+//     if (event.ctrlKey) {
+//         button.style.background = 'red'
+//     }
+// }
+// button.addEventListener('click', getRedCtrl)
+
+// 7. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'.
+
+let div = document.querySelector('.write');
+
+function showDownKey(event) {
     if (event.ctrlKey) {
-        button.style.background = 'red'
+        div.innerHTML = 1
+    } else if (event.altKey) {
+        div.innerHTML = 2
+    } else if (event.shiftKey) {
+        div.innerHTML = 3
+    } else {
+        div.innerHTML = "Ни одна из клавиш не была нажата"
     }
 }
-button.addEventListener('click', getRedCtrl)
 
-
+div.addEventListener('click', showDownKey)
 
 // // 8. Создайте кнопку и элемент. При нажатии на кнопку, будет скрываться элемент
 
