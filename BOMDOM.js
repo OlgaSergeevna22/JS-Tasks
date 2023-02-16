@@ -87,26 +87,37 @@
 // }
 // button.addEventListener('click', getRedCtrl)
 
-// 7. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'.
+// // 7. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'.
 
-let div = document.querySelector('.write');
+// let div = document.querySelector('.write');
 
-function showDownKey(event) {
-    if (event.ctrlKey) {
-        div.innerHTML = 1
-    } else if (event.altKey) {
-        div.innerHTML = 2
-    } else if (event.shiftKey) {
-        div.innerHTML = 3
-    } else {
-        div.innerHTML = "Ни одна из клавиш не была нажата"
-    }
-}
+// function showDownKey(event) {
+//     if (event.ctrlKey) {
+//         div.innerHTML = 1
+//     } else if (event.altKey) {
+//         div.innerHTML = 2
+//     } else if (event.shiftKey) {
+//         div.innerHTML = 3
+//     } else {
+//         div.innerHTML = "Ни одна из клавиш не была нажата"
+//     }
+// }
 
-div.addEventListener('click', showDownKey)
+// div.addEventListener('click', showDownKey)
 
 // // 8. Создайте кнопку и элемент. При нажатии на кнопку, будет скрываться элемент
 
 // document.body.querySelector('.click').onclick = function() {
 //     document.body.querySelector('.text-click').hidden = true
 // }
+
+// 9. Создайте раскрывающееся меню
+
+let menu = document.querySelector('.menu');
+let title = menu.querySelector('.title');
+
+function clickDown() {
+    menu.classList.toggle('open');
+}
+
+title.addEventListener('click', clickDown)
