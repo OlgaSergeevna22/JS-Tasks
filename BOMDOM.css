@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: top;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    border: 2px red solid;
+    background: linear-gradient(to left top, rgb(21, 216, 230), rgb(72, 239, 17));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: 1s all;
+}
+
+.field {
+    border: 5px green solid;
+    background-color: greenyellow;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.task8 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.text-click {
+    color: blue;
+    font-size: 24px;
+    width: 200px;
+    text-align: center;
+}
+
+.click {
+    width: 200px;
+    height: 30px;
+    background-color: rgb(65, 197, 8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(111, 6, 6);
+    font-size: 16px;
+    transition-duration: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.click:hover {
+    background-color: rgb(1, 106, 14);
+    color: rgb(240, 3, 3);
+}
