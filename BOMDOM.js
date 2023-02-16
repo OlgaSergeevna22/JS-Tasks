@@ -61,24 +61,31 @@
 
 // document.body.addEventListener('keypress', showKeyCode)
 
-// 5. Создайте инпут который будет выводить последний элемент введенный в инпут 
+// // 5. Создайте инпут который будет выводить последний элемент введенный в инпут 
 
 
-let form = document.querySelector('form');
-let input = document.querySelector('.last-element')
+// let form = document.querySelector('form');
+// let input = document.querySelector('.last-element')
 
-// function showLastElement(event) {
-//     let lastKey = String.fromCharCode(event.keyCode);
-//     result.innerTEXT = lastKey;
-// }
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let last = input.value.split('')
-    input.value = '';
-    console.log(last[last.length - 1]);
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     let last = input.value.split('')
+//     input.value = '';
+//     console.log(last[last.length - 1]);
 
-})
+// })
 
+
+// 6. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl.
+
+let button = document.querySelector('.click-red');
+
+function getRedCtrl(event) {
+    if (event.ctrlKey) {
+        button.style.background = 'red'
+    }
+}
+button.addEventListener('click', getRedCtrl)
 
 
 
