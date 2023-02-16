@@ -48,18 +48,38 @@
 //     square.style.top = squareCoords.top + 'px';
 // }
 
-// 4. Создайте инпут который будет выводить код последнего элемента введенного в инпут 
+// // 4. Создайте инпут который будет выводить код последнего элемента введенного в инпут 
 
-let input = document.querySelector('.code');
-let result = document.querySelector('.task4')
+// let input = document.querySelector('.code');
+// let result = document.querySelector('.text-code')
 
-function keyCode(event) {
-    let code = event.keyCode;
-    let key = String.fromCharCode(event.keyCode);
-    result.innerHTML = 'Код: ' + code + ', клавиша: ' + key;
-}
+// function showKeyCode(event) {
+//     let code = event.keyCode;
+//     let key = String.fromCharCode(event.keyCode);
+//     result.innerHTML = 'Код: ' + code + ', клавиша: ' + key;
+// }
 
-document.body.addEventListener('keypress', keyCode)
+// document.body.addEventListener('keypress', showKeyCode)
+
+// 5. Создайте инпут который будет выводить последний элемент введенный в инпут 
+
+
+let form = document.querySelector('form');
+let input = document.querySelector('.last-element')
+
+// function showLastElement(event) {
+//     let lastKey = String.fromCharCode(event.keyCode);
+//     result.innerTEXT = lastKey;
+// }
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let last = input.value.split('')
+    input.value = '';
+    console.log(last[last.length - 1]);
+
+})
+
+
 
 
 // // 8. Создайте кнопку и элемент. При нажатии на кнопку, будет скрываться элемент

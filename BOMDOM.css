@@ -25,7 +25,7 @@ body {
     width: 400px;
     height: 400px;
     position: relative;
-    left: 300px;
+    left: 500px;
     top: 100px;
 }
 
@@ -58,4 +58,12 @@ body {
 .click:hover {
     background-color: rgb(1, 106, 14);
     color: rgb(240, 3, 3);
+}
+
+.task4 {
+    margin: 5px 20px 20px;
+}
+
+.task5 {
+    margin: 5px 20px 20px;
 }
