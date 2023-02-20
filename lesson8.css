@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.windowDark {
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(1, 0, 0, .3);
+    right: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    animation-name: animate2;
+    animation-duration: 2s
+}
+
+.btnPoput {
+    margin: 20px 40%;
+    font-size: 33px;
+    border-radius: 11px;
+    background-color: rgba(63, 63, 63, 0.9);
+    box-shadow: 0 3px 10px #010;
+    text-align: center;
+    text-decoration: none;
+    background: #DCDCDC;
+    padding: 6px 17px;
+}
+
+.btnPoput:active {
+    transform: scale(0.97);
+}
+
+.popup {
+    transition: 3s;
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 38%;
+    top: 30%;
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+    background-color: rgb(246, 120, 120);
+    box-shadow: 0 13px 21px rgba(0, 1, 0, .19), 0 21px 63px rgba(0, 1, 0, .31);
+    border-radius: 15px;
+    border: 1px solid #660166;
+    animation-name: animate;
+    animation-duration: 1s
+}
+
+.close {
+    color: rgb(29, 5, 90);
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 280px;
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+    background-color: rgba(253, 21, 0, 0.7);
+}
+
+@keyframes animate {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 30%;
+        opacity: 1
+    }
+}
+
+@keyframes animate2 {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
