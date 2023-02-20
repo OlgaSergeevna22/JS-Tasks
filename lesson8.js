@@ -27,19 +27,30 @@
 // console.log(calc());
 
 
-// 2. Написать функцию makeCounter, которая возвращает функцию, внутри которой увеличивается сохраненный каким-то образом ранее счетчик.
+// // 2. Написать функцию makeCounter, которая возвращает функцию, внутри которой увеличивается сохраненный каким-то образом ранее счетчик.
 
 
+// function makeCounter() {
+//     let count = 0;
+//     return function() {
+//         return count++
+//     }
+// }
 
-function makeCounter() {
-    let count = 0;
-    return function() {
-        return count++
-    }
+// let counter1 = makeCounter();
+// let counter2 = makeCounter();
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter2());
+
+
+// 3. Написать функцию startsWith, которая принимает 2 строки и проверяет, начинается ли первая строка с символов второй строки. Функция возвращает true или false.
+
+function startsWith(str1, str2) {
+    str1 = str1.split('');
+    str2 = str2.split('')
+    return (str2.includes(str1[0]));
 }
 
-let counter1 = makeCounter();
-let counter2 = makeCounter();
-console.log(counter1());
-console.log(counter1());
-console.log(counter2());
+console.log(startsWith('asdf', 'dfg'));
+console.log(startsWith('qwert', 'qazxs'));
